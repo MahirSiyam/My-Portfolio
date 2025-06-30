@@ -10,14 +10,18 @@ const About = () => {
           About Me
         </h2>
 
-        <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8 bg-[#141a29] p-4 sm:p-6 md:p-8 rounded-xl shadow-md border border-[#fec544]">
+        <div className="flex flex-col lg:flex-row justify-center items-center gap-8 bg-[#141a29] p-4 sm:p-6 md:p-8 rounded-xl shadow-md border border-[#fec544]">
           {/* Image Section */}
           <div className="">
-            <img src={about} alt="About Me" className="w-auto h-[500px] rounded-lg" />
+            <img
+              src={about}
+              alt="About Me"
+              className="w-auto h-[500px] rounded-lg object-contain"
+            />
           </div>
 
           {/* Text Section */}
-          <div className="w-full lg:w-1/2 text-white text-start text-base leading-relaxed font-light">
+          <div className="w-full lg:w-1/2 text-white text-center lg:text-left text-base leading-relaxed font-light">
             <p>
               Hello! I’m{" "}
               <span className="font-semibold text-[#fec544]">Mahir Siyam</span>, a passionate front-end web developer
