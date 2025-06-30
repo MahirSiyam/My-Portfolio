@@ -46,7 +46,7 @@ const Navbar = () => {
 
 
   return (
-    <div className="navbar max-w-7xl mx-auto border border-[#fec544] rounded-xl fixed top-0 left-0 right-0 z-50 justify-center items-center bg-[#070d1b]/55 backdrop-blur-lg shadow-sm">
+    <div className="navbar border border-[#fec544] rounded-xl fixed top-0 left-0 right-0 z-50 justify-center items-center bg-[#070d1b]/55 backdrop-blur-lg shadow-sm">
       <title>Mahir</title>
       {/* Navbar Start */}
       <div className="navbar-start">
