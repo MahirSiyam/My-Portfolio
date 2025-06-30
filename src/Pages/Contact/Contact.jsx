@@ -132,7 +132,7 @@ const Contact = () => {
 
         {/* Footer inside section */}
         <div className="mt-4 sm:mt-8 md:mt-12 lg:mt-16 text-center border-t border-[#fec544] pt-4 text-white">
-          <p className="mt-6 text-sm sm:text-base">
+          <p className="mt-10 text-sm sm:text-base">
             © 2025 - All rights reserved by{" "}
             <span className="text-[#fec544] font-semibold">Mahir Siyam</span>
           </p>
