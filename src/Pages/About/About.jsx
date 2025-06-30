@@ -1,5 +1,5 @@
 import React from "react";
-import about from "../../assets/About us page.gif";
+import about from "../../assets/IMG-20240929-WA0007.jpg";
 
 const About = () => {
   return (
@@ -12,8 +12,8 @@ const About = () => {
 
         <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8 bg-[#141a29] p-4 sm:p-6 md:p-8 rounded-xl shadow-md border border-[#fec544]">
           {/* Image Section */}
-          <div className="w-full lg:w-1/2">
-            <img src={about} alt="About Me" className="w-full h-auto rounded-lg" />
+          <div className="">
+            <img src={about} alt="About Me" className="w-auto h-[500px] rounded-lg" />
           </div>
 
           {/* Text Section */}

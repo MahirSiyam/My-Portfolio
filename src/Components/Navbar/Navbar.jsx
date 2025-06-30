@@ -46,8 +46,8 @@ const Navbar = () => {
 
 
   return (
-    <div className="navbar border border-[#fec544] rounded-xl fixed top-0 left-0 right-0 z-50 justify-center items-center bg-[#070d1b]/55 backdrop-blur-lg shadow-sm">
-      <title>Mahir</title>
+  <div className="navbar fixed top-0 left-0 right-0 z-50 bg-[#070d1b]/45 backdrop-blur-lg shadow-sm">
+    <div className="max-w-7xl mx-auto w-full px-4 flex justify-between items-center">
       {/* Navbar Start */}
       <div className="navbar-start">
         {/* Mobile Dropdown */}
@@ -67,12 +67,7 @@ const Navbar = () => {
               viewBox="0 0 24 24"
               stroke="currentColor"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h8m-8 6h16"
-              />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />
             </svg>
           </motion.div>
 
@@ -113,14 +108,16 @@ const Navbar = () => {
           whileTap={{ scale: 0.95 }}
           transition={{ type: "spring", stiffness: 300 }}
           className="btn bg-[#fec544] text-black font-bold rounded-2xl flex items-center gap-2"
-          href="#"
+          
         >
           <img className="w-6" src={download} alt="download" />
           Resume
         </motion.a>
       </div>
     </div>
-  );
+  </div>
+);
+
 };
 
 export default Navbar;

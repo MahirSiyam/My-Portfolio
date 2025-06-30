@@ -11,7 +11,7 @@ import Contact from "./Pages/Contact/Contact";
 const App = () => {
   
   return (
-    <div className="">
+    <div>
       <section className="sticky top-0 z-50">
         <Navbar></Navbar>
       </section>
