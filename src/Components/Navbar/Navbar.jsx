@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
 
-import logo from "../../assets/Creative Agency Logo with Letter 'M'.png";
+import logo from "../../assets/Creative Agency Logo with Letter 'M'-modified.png";
 import home from "../../assets/icons8-home-24.png";
 import about from "../../assets/icons8-about-me-50.png";
 import skills from "../../assets/icons8-skills-50.png";
@@ -47,6 +47,7 @@ const Navbar = () => {
 
   return (
     <div className="navbar max-w-7xl mx-auto fixed top-0 left-0 right-0 z-50 justify-center items-center bg-[#070d1b]/55 backdrop-blur-lg shadow-sm">
+      <title>Mahir</title>
       {/* Navbar Start */}
       <div className="navbar-start">
         {/* Mobile Dropdown */}
@@ -91,7 +92,7 @@ const Navbar = () => {
           duration={900}
           className="flex justify-center items-center gap-3 cursor-pointer"
         >
-          <img className="w-10 rounded-4xl" src={logo} alt="logo" />
+          <img className="w-9 rounded-4xl" src={logo} alt="logo" />
           <p className="text-white text-2xl font-bold">
             <span className="text-[#fec544]">M</span>ahir
           </p>

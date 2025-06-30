@@ -17,6 +17,7 @@ const Home = () => {
         backgroundPosition: "center",
       }}
     >
+      <title>Mahir</title>
       <div className="hero-overlay bg-opacity-70"></div>
       <div className="hero-content text-white flex-col lg:flex-row-reverse z-10">
         <img

@@ -4,7 +4,7 @@ import css3 from "../../assets/css-3.png";
 import tailwind from "../../assets/icons8-tailwind-css-48.png";
 import js from "../../assets/icons8-javascript-48.png";
 import react from "../../assets/react.svg"
-import router from "../../assets/react-router.png"
+import router from "../../assets/react-router-svgrepo-com.svg"
 import nextjs from "../../assets/Next.js.png"
 import nodejs from "../../assets/icons8-node-js-48.png"
 import express from "../../assets/Express.png"
@@ -64,6 +64,7 @@ const SkillCategory = ({ title, skills }) => (
     whileHover={{ scale: 1.05, boxShadow: "0px 8px 24px rgba(254, 197, 68, 0.4)" }}
     transition={{ type: "spring", stiffness: 200 }}
   >
+    <title>Mahir</title>
     <h3 className="text-2xl font-semibold mb-4 text-[#fec544]">{title}</h3>
     <ul className="grid grid-cols-3 gap-6 justify-items-center">
       {skills.map((skill, index) => (

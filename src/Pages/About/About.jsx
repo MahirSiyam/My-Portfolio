@@ -4,6 +4,7 @@ import about from "../../assets/About us page.gif";
 const About = () => {
   return (
     <section id="about" className="bg-[#0a111e] py-8 md:py-12 lg:py-16 px-6">
+      <title>Mahir</title>
   <div className="max-w-6xl mx-auto text-center">
     <h2 className="text-4xl font-bold text-[#fec544] mb-8">About Me</h2>
 

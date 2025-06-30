@@ -14,6 +14,7 @@ import linkedin from "../../assets/linkedin.png"
 const Contact = () => {
   return (
     <section id="contact" className="min-h-screen px-6 bg-[#0a111e]">
+      <title>Mahir</title>
       <div className="max-w-6xl mx-auto py-8 md:py-12 lg:py-16">
         <h2 className="text-3xl font-bold text-center text-[#fec544] mb-5">
           Let's Connect
