@@ -20,7 +20,7 @@ import { motion } from "framer-motion";
 const Skills = () => {
   return (
     <section id="skills" className="bg-[#0a111e] py-16 px-6">
-      <div className="max-w-6xl mx-auto text-center">
+      <div className="max-w-7xl mx-auto text-center">
         <h2 className="text-4xl font-bold text-[#fec544] mb-12">My Skills</h2>
 
         <div className="grid md:grid-cols-3 gap-8 text-left">

@@ -16,7 +16,7 @@ const Contact = () => {
     <section id="contact" className="min-h-screen bg-[#0a111e] py-16 px-4 sm:px-8 box-border overflow-hidden break-words">
       <title>Mahir</title>
 
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl font-bold text-center text-[#fec544] mb-6">
           Let's Connect
         </h2>

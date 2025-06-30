@@ -11,7 +11,7 @@ import Contact from "./Pages/Contact/Contact";
 const App = () => {
   
   return (
-    <div className="max-w-7xl mx-auto">
+    <div className="">
       <section className="sticky top-0 z-50">
         <Navbar></Navbar>
       </section>

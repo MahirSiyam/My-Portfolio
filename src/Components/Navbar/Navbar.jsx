@@ -16,7 +16,7 @@ const Navbar = () => {
   <>
     {[
       { icon: home, label: "Home", to: "home" },
-      { icon: about, label: "About Us", to: "about" },
+      { icon: about, label: "About Me", to: "about" },
       { icon: skills, label: "Skills", to: "skills" },
       { icon: education, label: "Education", to: "education" },
       { icon: project, label: "Projects", to: "projects" },
@@ -46,7 +46,7 @@ const Navbar = () => {
 
 
   return (
-    <div className="navbar max-w-7xl mx-auto fixed top-0 left-0 right-0 z-50 justify-center items-center bg-[#070d1b]/55 backdrop-blur-lg shadow-sm">
+    <div className="navbar max-w-7xl mx-auto border border-[#fec544] rounded-xl fixed top-0 left-0 right-0 z-50 justify-center items-center bg-[#070d1b]/55 backdrop-blur-lg shadow-sm">
       <title>Mahir</title>
       {/* Navbar Start */}
       <div className="navbar-start">

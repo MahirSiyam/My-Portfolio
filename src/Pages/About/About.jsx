@@ -5,9 +5,9 @@ const About = () => {
   return (
     <section id="about" className="bg-[#0a111e] py-16 px-4 sm:px-8">
       <title>Mahir</title>
-      <div className="max-w-6xl mx-auto text-center">
+      <div className="max-w-7xl mx-auto text-center">
         <h2 className="text-3xl sm:text-4xl font-bold text-[#fec544] mb-8">
-          About Us
+          About Me
         </h2>
 
         <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8 bg-[#141a29] p-4 sm:p-6 md:p-8 rounded-xl shadow-md border border-[#fec544]">
