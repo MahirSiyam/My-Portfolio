@@ -1,8 +1,13 @@
 import React, { useState } from "react";
-import { FaGithub } from "react-icons/fa";
 import img1 from "../../assets/Screenshot 2025-06-29 024137.png";
 import img2 from "../../assets/Screenshot 2025-06-29 031202.png";
 import img3 from "../../assets/Screenshot 2025-06-29 031415.png";
+import close from "../../assets/icons8-close-64.png";
+import github from "../../assets/icons8-github-64.png";
+import liveLink from "../../assets/icons8-live-50.png";
+import details from "../../assets/icons8-details-48.png";
+
+import { motion } from "framer-motion";
 
 const projectData = [
   {
@@ -21,7 +26,7 @@ const projectData = [
     ],
     github: {
       client: "https://github.com/MahirSiyam/talknest-client",
-      server: null,
+      server: "https://github.com/MahirSiyam/talknest-server",
     },
     live: "https://talknest-ab7a1.web.app/myBookedTutors",
     details: `TalkNest is a full-stack tutor booking platform built with React, Firebase, Express.js, and MongoDB. Students can view tutor profiles, filter by language, book sessions, and manage appointments from their personalized dashboard.
@@ -133,15 +138,17 @@ const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
 
   return (
-    <section id="projects" className="bg-white py-16 px-6">
+    <section id="projects" className="bg-[#0a111e] py-8 md:py-12 lg:py-16 px-6">
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-4xl font-bold text-blue-600 mb-12">My Projects</h2>
+        <h2 className="text-4xl font-bold text-[#fec544] mb-12">My Projects</h2>
 
         <div className="grid md:grid-cols-1 gap-8">
           {projectData.map((project) => (
-            <div
+            <motion.div
               key={project.id}
-              className="bg-gray-50 rounded-xl shadow-md overflow-visible flex flex-col md:flex-row"
+              whileHover={{ scale: 1.02 }}
+              transition={{ type: "spring", stiffness: 200 }}
+              className="bg-[#141a29] rounded-xl shadow-md overflow-visible flex flex-col md:flex-row border border-[#fec544]"
             >
               {/* Image Section */}
               <div className="md:w-1/2">
@@ -155,15 +162,15 @@ const Projects = () => {
               {/* Content Section */}
               <div className="p-5 flex justify-center items-center flex-grow md:w-1/2">
                 <div>
-                  <h3 className="text-2xl font-semibold text-gray-800 mb-4">
+                  <h3 className="text-2xl font-semibold text-[#fec544] mb-4">
                     {project.name}
                   </h3>
-                  <p className="text-gray-600 mb-6">{project.description}</p>
+                  <p className="text-white mb-6">{project.description}</p>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.technologies.map((tech, idx) => (
                       <span
                         key={idx}
-                        className="badge badge-outline text-blue-600 border-blue-300"
+                        className="badge badge-outline text-white border-[#fec544]"
                       >
                         {tech}
                       </span>
@@ -172,20 +179,25 @@ const Projects = () => {
 
                   <div className="flex flex-wrap gap-2 mt-auto">
                     {/* GitHub Dropdown */}
-                    <div className="dropdown dropdown-top md:dropdown-bottom">
+                    <motion.div
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      transition={{ type: "spring", stiffness: 300 }}
+                      className="dropdown dropdown-top md:dropdown-bottom"
+                    >
                       <label
                         tabIndex={0}
-                        className="btn btn-sm btn-outline text-blue-600 flex items-center gap-1"
+                        className="btn btn-sm btn-outline text-black font-bold bg-[#fec544] flex items-center gap-1"
                       >
-                        <FaGithub /> GitHub
+                        <img className="w-6" src={github} alt="github" /> GitHub
                       </label>
                       <ul
                         tabIndex={0}
-                        className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
+                        className="dropdown-content z-[1] menu p-2 shadow bg-[#0a111e] rounded-box w-52"
                       >
                         <li>
                           <a
-                            className="bg-base-300"
+                            className="text-white hover:bg-[#141a29] hover:text-[#fec544]"
                             href={project.github.client}
                             target="_blank"
                             rel="noopener noreferrer"
@@ -196,7 +208,7 @@ const Projects = () => {
                         {project.github.server && (
                           <li>
                             <a
-                              className="bg-base-300"
+                              className="text-white hover:bg-[#141a29] hover:text-[#fec544]"
                               href={project.github.server}
                               target="_blank"
                               rel="noopener noreferrer"
@@ -206,49 +218,61 @@ const Projects = () => {
                           </li>
                         )}
                       </ul>
-                    </div>
+                    </motion.div>
 
                     {/* Live Button */}
-                    <a
+                    <motion.a
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      transition={{ type: "spring", stiffness: 300 }}
                       href={project.live}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="btn btn-sm btn-outline text-green-600"
+                      className="btn btn-sm btn-outline text-black font-bold bg-[#fec544] flex items-center gap-1"
                     >
+                      <img className="w-6" src={liveLink} alt="live site" />
                       Live Site
-                    </a>
+                    </motion.a>
 
                     {/* Details Button */}
-                    <button
-                      className="btn btn-sm btn-outline text-purple-600"
+                    <motion.button
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      transition={{ type: "spring", stiffness: 300 }}
+                      className="btn btn-sm btn-outline text-black font-bold bg-[#fec544] flex items-center gap-1"
                       onClick={() => setSelectedProject(project)}
                     >
+                      <img className="w-6" src={details} alt="" />
                       Project Details
-                    </button>
+                    </motion.button>
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
 
         {/* Modal */}
         {selectedProject && (
           <dialog id="my_modal" className="modal modal-open">
-            <div className="modal-box">
-              <h3 className="font-bold text-lg text-blue-600 mb-2">
+            <div className="modal-box bg-[#141a29]">
+              <h3 className="font-bold text-lg text-[#fec544] mb-2">
                 {selectedProject.name} - Details
               </h3>
-              <p className="text-gray-700 text-start whitespace-pre-line">
+              <p className="text-white text-start whitespace-pre-line">
                 {selectedProject.details}
               </p>
               <div className="modal-action">
-                <button
-                  className="btn"
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                  className="btn bg-[#fec544] text-black font-bold flex items-center gap-1"
                   onClick={() => setSelectedProject(null)}
                 >
+                  <img className="w-4" src={close} alt="close" />
                   Close
-                </button>
+                </motion.button>
               </div>
             </div>
           </dialog>

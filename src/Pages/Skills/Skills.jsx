@@ -11,14 +11,17 @@ import express from "../../assets/Express.png"
 import firebase from "../../assets/icons8-firebase-48.png"
 import mongodb from "../../assets/MongoDB.png"
 import git from "../../assets/Git.png"
-import github from "../../assets/GitHub.png"
+import github from "../../assets/github.png"
 import vscode from "../../assets/Visual Studio Code (VS Code).png"
+
+import { motion } from "framer-motion";
+
 
 const Skills = () => {
   return (
-    <section id="skills" className="bg-gray-100 py-16 px-6">
+    <section id="skills" className="bg-[#0a111e] py-8 md:py-12 lg:py-16 px-6">
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-4xl font-bold text-blue-600 mb-12">My Skills</h2>
+        <h2 className="text-4xl font-bold text-[#fec544] mb-12">My Skills</h2>
 
         <div className="grid md:grid-cols-3 gap-8 text-left">
           {/* Frontend */}
@@ -56,13 +59,17 @@ const Skills = () => {
 };
 
 const SkillCategory = ({ title, skills }) => (
-  <div className="bg-white p-6 rounded-xl shadow hover:shadow-md transition-all">
-    <h3 className="text-2xl font-semibold mb-4 text-blue-500">{title}</h3>
+  <motion.div
+    className="bg-[#141a29] p-6 rounded-xl shadow border border-[#fec544]"
+    whileHover={{ scale: 1.05, boxShadow: "0px 8px 24px rgba(254, 197, 68, 0.4)" }}
+    transition={{ type: "spring", stiffness: 200 }}
+  >
+    <h3 className="text-2xl font-semibold mb-4 text-[#fec544]">{title}</h3>
     <ul className="grid grid-cols-3 gap-6 justify-items-center">
       {skills.map((skill, index) => (
         <li
           key={index}
-          className="flex flex-col items-center text-gray-700 text-lg"
+          className="flex flex-col items-center text-white text-lg"
         >
           {skill.icon && (
             <img
@@ -71,11 +78,11 @@ const SkillCategory = ({ title, skills }) => (
               className="w-10 h-10 mb-2"
             />
           )}
-          <span className="text-sm font-bold">{skill.label}</span>
+          <span className="text-sm font-semibold">{skill.label}</span>
         </li>
       ))}
     </ul>
-  </div>
+  </motion.div>
 );
 
 export default Skills;
