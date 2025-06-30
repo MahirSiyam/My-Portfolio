@@ -16,7 +16,7 @@ const Navbar = () => {
   <>
     {[
       { icon: home, label: "Home", to: "home" },
-      { icon: about, label: "About Me", to: "about" },
+      { icon: about, label: "About Us", to: "about" },
       { icon: skills, label: "Skills", to: "skills" },
       { icon: education, label: "Education", to: "education" },
       { icon: project, label: "Projects", to: "projects" },

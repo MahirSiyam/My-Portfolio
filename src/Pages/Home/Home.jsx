@@ -10,7 +10,7 @@ import { motion } from "framer-motion";
 const Home = () => {
   return (
     <div
-      className="hero min-h-screen px-10 md:px-15 lg:px-20"
+      className="hero min-h-screen py-16 px-10 md:px-15 lg:px-20"
       style={{
         backgroundImage: `url(${bgImage})`,
         backgroundSize: "cover",
@@ -39,7 +39,7 @@ const Home = () => {
             <br />
             <span className="text-white text-5xl font-bold">Mahir Siyam</span>
           </h1>
-          <p className="py-6 w-2/3 text-base-300">
+          <p className="py-6 w-11/12 text-base-300">
             I am a passionate Frontend Developer dedicated to building clean,
             responsive, and user-friendly web interfaces. I specialize in modern
             technologies like HTML, CSS, JavaScript, React, and Tailwind CSS to
