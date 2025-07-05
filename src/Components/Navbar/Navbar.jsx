@@ -104,15 +104,19 @@ const Navbar = () => {
       {/* Navbar End */}
       <div className="navbar-end">
         <motion.a
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.95 }}
-          transition={{ type: "spring", stiffness: 300 }}
-          className="btn bg-[#fec544] text-black font-bold rounded-2xl flex items-center gap-2"
-          
-        >
-          <img className="w-6" src={download} alt="download" />
-          Resume
-        </motion.a>
+  whileHover={{ scale: 1.1 }}
+  whileTap={{ scale: 0.95 }}
+  transition={{ type: "spring", stiffness: 300 }}
+  href="https://drive.google.com/uc?export=download&id=1St-5THi3zdSH_p1kYKStTEMdPxb_P_1P"
+  download
+  target="_blank"
+  rel="noopener noreferrer"
+  className="btn bg-[#fec544] text-black font-bold rounded-2xl flex items-center gap-2"
+>
+  <img className="w-6" src={download} alt="download" />
+  Resume
+</motion.a>
+
       </div>
     </div>
   </div>
