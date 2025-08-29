@@ -13,15 +13,48 @@ import linkedin from "../../assets/linkedin.png";
 
 const Contact = () => {
   return (
-    <section id="contact" className="min-h-screen bg-[#0a111e] py-16 px-4 sm:px-8 box-border overflow-hidden break-words">
+    <section id="contact" className="bg-[#0a111e] py-16 px-6 box-border overflow-hidden break-words">
       <title>Mahir</title>
+
+      {/* Inject the CSS for border animation */}
+      <style>
+        {`
+          @property --border-angle {
+            syntax: "<angle>";
+            inherits: true;
+            initial-value: 0deg;
+          }
+
+          @keyframes border-spin {
+            100% {
+              --border-angle: 360deg;
+            }
+          }
+
+          .animate-border {
+            animation: border-spin 6s linear infinite;
+            background:
+              linear-gradient(#141a29, #141a29) padding-box,
+              conic-gradient(
+                from var(--border-angle),
+                rgba(100, 116, 139, 0.48) 80%,
+                #fec544 86%,
+                #dbb85a 90%,
+                #fec544 94%,
+                rgba(100, 116, 139, 0.48)
+              ) border-box;
+            border: 2px solid transparent;
+            border-radius: 1rem;
+          }
+        `}
+      </style>
 
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl font-bold text-center text-[#fec544] mb-6">
           Let's Connect
         </h2>
 
-        <div className="bg-[#141a29] rounded-xl shadow-md p-6 sm:p-8 border border-[#fec544]">
+        <div className="bg-[#141a29] rounded-xl shadow-md p-4 sm:p-8 border animate-border border-[#fec544]">
           <p className="text-base sm:text-lg text-white mb-8 text-center">
             I’m always open to connecting — whether it’s about a new project, a
             creative idea, or a potential collaboration. Feel free to reach out
@@ -131,14 +164,6 @@ const Contact = () => {
         </div>
 
       </div>
-
-      {/* Footer inside section */}
-        <div className="mt-4 sm:mt-8 md:mt-12 lg:mt-16 text-center border-t border-[#fec544] pt-4 text-white">
-          <p className="mt-10 text-sm sm:text-base">
-            © 2025 - All rights reserved by{" "}
-            <span className="text-[#fec544] font-semibold">Mahir Siyam</span>
-          </p>
-        </div>
     </section>
   );
 };

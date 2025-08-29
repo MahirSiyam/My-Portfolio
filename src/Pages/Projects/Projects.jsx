@@ -1,19 +1,43 @@
 import React from "react";
 import img1 from "../../assets/Screenshot 2025-06-29 024137.png";
-import img2 from "../../assets/Screenshot 2025-06-29 031202.png";
-import img3 from "../../assets/Screenshot 2025-06-29 031415.png";
+import img2 from "../../assets/Screenshot 2025-08-14 010859.png";
+import img3 from "../../assets/Screenshot 2025-08-11 110332.png";
 import github from "../../assets/icons8-github-64.png";
 import liveLink from "../../assets/icons8-live-50.png";
-
 import { motion } from "framer-motion";
 
 const projectData = [
   {
     id: 1,
-    name: "TalkNest",
+    name: "UniWise – Scholarship Application Platform",
+    image: img3,
+    description:
+      "A full-stack scholarship platform that allows students to explore, apply, and manage scholarships with secure payment integration and a role-based management system.",
+    technologies: [
+      "React",
+      "React Router",
+      "Tailwind CSS",
+      "Axios",
+      "Stripe React",
+      "Firebase Auth",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Stripe Payment Integration",
+      "Firebase Admin SDK",
+    ],
+    github: {
+      client: "https://github.com/MahirSiyam/Uniwise-Client",
+      server: "https://github.com/MahirSiyam/Uniwise-Server",
+    },
+    live: "https://explore-email-password-a-22a93.web.app/",
+  },
+  {
+    id: 2,
+    name: "TalkNest – Tutor Finder Platform",
     image: img1,
     description:
-      "A tutor booking platform where students can view, book, and manage tutor appointments.",
+      "A web application to help students find and book tutors based on subjects and location with real-time appointment management.",
     technologies: [
       "React",
       "Tailwind CSS",
@@ -29,11 +53,11 @@ const projectData = [
     live: "https://talknest-ab7a1.web.app/myBookedTutors",
   },
   {
-    id: 2,
-    name: "Recipe Book",
+    id: 3,
+    name: "COOKING – Recipe Management App",
     image: img2,
     description:
-      "A recipe management system with user authentication and CRUD functionalities.",
+      "A full-stack recipe management app where users can create, update, delete, and like recipes with real-time updates and personalized dashboards.",
     technologies: [
       "React",
       "Tailwind CSS",
@@ -48,36 +72,61 @@ const projectData = [
     },
     live: "https://recipe-book-app-8135e.web.app/",
   },
-  {
-    id: 3,
-    name: "Marathon Run",
-    image: img3,
-    description:
-      "A responsive single-page website designed for a marathon event.",
-    technologies: ["Firebase", "React", "Tailwind CSS", "DaisyUI"],
-    github: {
-      client: "https://github.com/MahirSiyam/Run",
-      server: null,
-    },
-    live: "https://marathon-run-project.netlify.app/",
-  },
 ];
 
 const Projects = () => {
-
   return (
     <section id="projects" className="bg-[#0a111e] py-16 px-6">
-      <title>Mahir</title>
+
+      {/* Inject the CSS for border animation */}
+      <style>
+        {`
+          @property --border-angle {
+            syntax: "<angle>";
+            inherits: true;
+            initial-value: 0deg;
+          }
+
+          @keyframes border-spin {
+            100% {
+              --border-angle: 360deg;
+            }
+          }
+
+          .animate-border {
+            animation: border-spin 6s linear infinite;
+            background:
+              linear-gradient(#141a29, #141a29) padding-box,
+              conic-gradient(
+                from var(--border-angle),
+                rgba(100, 116, 139, 0.48) 80%,
+                #fec544 86%,
+                #dbb85a 90%,
+                #fec544 94%,
+                rgba(100, 116, 139, 0.48)
+              ) border-box;
+            border: 2px solid transparent;
+            border-radius: 1rem;
+          }
+        `}
+      </style>
       <div className="max-w-7xl mx-auto text-center">
-        <h2 className="text-4xl font-bold text-[#fec544] mb-12">My Projects</h2>
+        <h2 className="text-3xl font-bold text-[#fec544] mb-8">My Projects</h2>
 
         <div className="grid md:grid-cols-1 gap-8">
-          {projectData.map((project) => (
+          {projectData.map((project, index) => (
             <motion.div
               key={project.id}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false, amount: 0.2 }}
+              transition={{
+                duration: 0.6,
+                delay: index * 0.15,
+                ease: "easeOut",
+              }}
               whileHover={{ scale: 1.02 }}
-              transition={{ type: "spring", stiffness: 200 }}
-              className="bg-[#141a29] rounded-xl shadow-md overflow-visible flex flex-col md:flex-row border border-[#fec544]"
+              className="bg-[#141a29] rounded-xl animate-border shadow-md overflow-visible flex flex-col md:flex-row border border-[#fec544]"
             >
               {/* Image Section */}
               <div className="md:w-1/2">
@@ -111,7 +160,6 @@ const Projects = () => {
                     <motion.div
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      transition={{ type: "spring", stiffness: 300 }}
                       className="dropdown dropdown-top md:dropdown-bottom"
                     >
                       <label
@@ -153,7 +201,6 @@ const Projects = () => {
                     <motion.a
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      transition={{ type: "spring", stiffness: 300 }}
                       href={project.live}
                       target="_blank"
                       rel="noopener noreferrer"
