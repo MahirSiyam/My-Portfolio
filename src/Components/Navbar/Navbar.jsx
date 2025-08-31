@@ -56,7 +56,7 @@ const Navbar = () => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
               transition={{ type: "spring", stiffness: 300 }}
-              className="btn p-2 mr-1 md:p-4 btn-ghost bg-[#070d1b] lg:hidden"
+              className="btn p-2 mr-2 md:p-4 btn-ghost bg-[#070d1b] lg:hidden"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
